@@ -11,5 +11,5 @@ services:
       - FLASK_APP=project/__init__.py
       - FLASK_ENV=development
       - APP_SETTINGS=project.config.DevelopmentConfig
-      - DATABASE_URL=mysql+pymysql://paxadmin:LpvuM1QnfcxOOVeNQQvl@pax-database.cd0j8avv0tgq.sa-east-1.rds.amazonaws.com:3306/paxdb
+      - DATABASE_URL=mysql+pymysql://my7xouigfdzw8m0h:ghuabqxddo7xab0h@zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/cyofgkwuvz6mathq
     command: python manage.py run -h 0.0.0.0
