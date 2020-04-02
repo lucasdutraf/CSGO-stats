@@ -1,5 +1,3 @@
-USE cyofgkwuvz6mathq;
-
 CREATE TABLE user(
     user_id   INT (11) NOT NULL AUTO_INCREMENT,
     name  VARCHAR (30) NOT NULL,
