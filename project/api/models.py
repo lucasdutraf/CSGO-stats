@@ -29,3 +29,20 @@ class User(db.Model):
             'role': self.role,
             'secondary_role': self.secondary_role,
         }
+class KDA(db.Model):
+    __tablename__ = 'statistic_kda'
+
+    kda_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    kda = db.Column(db.Float, nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    
+    def __init__(self, kda, user_id):
+        self.kda = kda
+        self.user_id = user_id
+
+    def to_json(self):
+        return {
+            'kda_id': self.kda_id,
+            'kda': self.kda,
+            'user_id': self.user_id
+        }
