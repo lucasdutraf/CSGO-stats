@@ -46,3 +46,21 @@ class KDA(db.Model):
             'kda': self.kda,
             'user_id': self.user_id
         }
+
+class ADR(db.Model):
+    __tablename__ = 'statistic_adr'
+
+    adr_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    adr = db.Column(db.Float, nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    
+    def __init__(self, adr, user_id):
+        self.adr = adr
+        self.user_id = user_id
+
+    def to_json(self):
+        return {
+            'adr_id': self.adr_id,
+            'adr': self.adr,
+            'user_id': self.user_id
+        }
