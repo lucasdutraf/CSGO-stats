@@ -21,13 +21,13 @@ def add_player():
     points = player.get('points')
     rank = player.get('rank')
     nick = player.get('nick')
-    role = player.get('role')
+    primary_role = player.get('primary_role')
     secondary_role = player.get('secondary_role')
     average_adr = player.get('average_adr')
     average_kda = player.get('average_kda')
 
     try:
-        player = User(name, points, rank, nick, role, secondary_role, average_adr, average_kda)
+        player = User(name, points, average_kda, average_adr, rank, nick, primary_role, secondary_role)
 
         db.session.add(player)
         db.session.flush()
