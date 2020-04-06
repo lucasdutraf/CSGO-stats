@@ -20,6 +20,6 @@ def create_app(script_info=None):
     migrate.init_app(app, db)
 
     # register blueprints
-    # app.register_blueprint(pax_blueprint, url_prefix='/pax')
+    app.register_blueprint(cs_blueprint)
 
     return app
